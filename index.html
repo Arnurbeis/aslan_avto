@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Aslan Avto</title>
+		<script>
+			// Функция для экранирования ввода пользователя
+			function sanitizeInput(input) {
+				const temp = document.createElement('div')
+				temp.innerText = input
+				return temp.innerHTML
+			}
+
+			function handleSubmit(event) {
+				event.preventDefault()
+				const userComment = document.getElementById('comment').value
+				const sanitizedComment = sanitizeInput(userComment)
+				document.getElementById('display').innerHTML =
+					'<strong>Ваш комментарий:</strong><br>' + sanitizedComment
+			}
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<a href="https://ibb.co.com/C7cNqvR">
+				<img src="https://i.ibb.co.com/HzS10Y5/logo2.jpg" alt="logo2" />
+			</a>
+		</header>
+
+		<div class="container">
+			<h2>Информация</h2>
+			<p>
+				Продажа б/у автозапчастей высокого качества из Японии, Канады и Германии
+				Предлагаем ассортимент автозапчастей, включая диски, двери, динамики,
+				фары, шины, детали из двигателя и многое другое. Все товары проходят
+				тщательную проверку, чтобы гарантировать их высокое качество и
+				долговечность. Мы предлагаем лучшие б/у детали для вашего автомобиля.
+				Наши товары доступны как оптом, так и в розницу. Мы осуществляем
+				отправки по Алматы и по Казахстану, обеспечивая быстрые и удобные
+				доставки.
+				<br />
+				<br />
+				Товары полностью работоспособны. Могут присутствовать незначительные
+				следы эксплуатации, а также следы снятия/установки. Смотрите другие
+				предложения
+				<a href="https://www.olx.kz/list/user/13A5s/" target="_blank">здесь</a>.
+				Услуги транспортной компании оплачивает получатель при получении товара!
+				<b>Отправка в регионы</b> осуществляется - только после 100% оплаты
+				данного товара продавцу.
+			</p>
+			<hr style="height: 1.5px; background-color: black; border: none" />
+			<h2>Адрес</h2>
+			<div class="map-container">
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d2907.233891691246!2d76.74341754458456!3d43.2255556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNDPCsDEzJzMyLjAiTiA3NsKwNDQnNDYuNSJF!5e0!3m2!1sen!2skz!4v1732378855606!5m2!1sen!2skz"
+					allowfullscreen=""
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+				></iframe>
+			</div>
+			<hr style="height: 1.4px; background-color: black; border: none" />
+			<h2>Каталог товаров</h2>
+			<div class="product-grid">
+				<!-- 12 карточек товаров -->
+				<div class="product-card" onclick="openModal(1)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/6ivh89pytnf81-KZ/image;s=1000x700"
+						alt="Товар 1"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							Monoblock AMG R17 PIrelli 225/45R17 лето
+						</h3>
+						<p class="product-price">Цена: 400.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(2)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/lhp1ojc2l6c53-KZ/image;s=1000x700"
+						alt="Товар 2"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Mercedes W210 Continental 215/55 R16</h3>
+						<p class="product-price">Цена: 270.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(3)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/n31n5oimnup73-KZ/image;s=1000x700"
+						alt="Товар 3"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Mercedes W210 авангард 215/55 R16</h3>
+						<p class="product-price">Цена: 250.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(4)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/tn87f7bax2sd2-KZ/image;s=1000x700"
+						alt="Товар 4"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Блок климат-контроль Toyota Camry 10</h3>
+						<p class="product-price">Цена: 20.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(5)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/m22ltjioc48p1-KZ/image;s=1000x700"
+						alt="Товар 5"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							BMW R16 7 J IS34 PSD 5x120 DIA 72.5 156 стиль
+						</h3>
+						<p class="product-price">Цена: 130.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(6)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/68vc8n2uw7j51-KZ/image;s=1000x700"
+						alt="Товар 6"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							IR - S R17 от Toyota Mark 2 разноширокие 7JJ/7,5JJ
+						</h3>
+						<p class="product-price">Цена: 200.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(7)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/6564hhs8gg8t1-KZ/image;s=1000x700"
+						alt="Товар 7"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							Toyota Sienna R16 6,5JJ PSD 5x114,3 ET50
+						</h3>
+						<p class="product-price">Цена: 170.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(8)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/xzawwc49rqzp1-KZ/image;s=1000x700"
+						alt="Товар 8"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Kumho 245/45R17 от Mercedes Benz W212</h3>
+						<p class="product-price">Цена: 270.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(9)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/5j7ylmllg7qd1-KZ/image;s=1000x700"
+						alt="Товар 9"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							Toyota R16 6,5J PSD 5x114.3 ЦО61 ET45 Canada
+						</h3>
+						<p class="product-price">Цена: 175.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(10)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/qfgdhdqrtarx1-KZ/image;s=1000x700"
+						alt="Товар 10"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Bridgestone 215/55R17</h3>
+						<p class="product-price">Цена: 280.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(11)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/qc3wmme6m7u42-KZ/image;s=1000x700"
+						alt="Товар 11"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Lexus R16 6,5J PSD 5x114.3 ЦО 61 ET45</h3>
+						<p class="product-price">Цена: 170.000 тг.</p>
+						<p class="product-condition">Состояние: б/у | освежен</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(12)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/ydatkwss22vt3-KZ/image;s=1000x700"
+						alt="Товар 12"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">
+							Legzas R18 8 J PSD 5/114,3 ET45 Графит
+						</h3>
+						<p class="product-price">Цена: 220.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(13)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/vg2mev7xbcat-KZ/image;s=1000x700"
+						alt="Товар 13"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">BBS LM R20 5/114,3</h3>
+						<p class="product-price">Цена: 500.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(14)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/tywgcm76v7oo1-KZ/image;s=1000x700"
+						alt="Товар 14"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">Anhelo Corazon R20 9JJ 5/114,35</h3>
+						<p class="product-price">Цена: 400.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+				<div class="product-card" onclick="openModal(15)">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/6g0faiguqwoq-KZ/image;s=1000x700"
+						alt="Товар 15"
+						class="product-image"
+					/>
+					<div class="product-info">
+						<h3 class="product-title">275 / 40 R19 8,5J BMW F01 стиль 235</h3>
+						<p class="product-price">Цена: 550.000 тг.</p>
+						<p class="product-condition">Состояние: б/у</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Модальные окна (12 товаров) -->
+		<div id="modal-1" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(1)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/yqnh7wfmoxr23-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/2hdcw2abb28y2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/x18ifyhcke2y1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Диск Monoblock AMG R17 с Шинами PIrelli 225/45R17 лето
+						<br />
+						<br />
+						Шина Pirelli P8 FS 225/45R17 год 2022 износ 10%
+						<br />
+						Диски оригинал Mercedes Monoblock AMG W202 R17 7,5 J 5/112 ЦО 66 ЕТ
+						35 в отличном состояние.
+						<br />
+						Не варенный без ремонтов. Made in Belgium
+						<br />
+						<br />
+						Можно приобрести по отдельности диск и шину, цену уточняйте
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-2" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(2)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/t4is08zazm1t-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/0i4nu5l105fj2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/7ogyjhwih17v-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Диск Оригинал Mercedes W210 с шинами Continental 215/55 R16
+						<br />
+						<br />
+						Шина Continental extremecontact DWS06 plus 215/55R16 год 2019 износ
+						10% <br />
+						Диски оригинал Mercedes W210 авангард R16 7,5 J 5/112 ЦО 66 ЕТ 41 в
+						отличном состояние.
+						<br />
+						Не варенный без ремонтов. Made in CZECH REPUBLIC.
+						<br />
+						<br />
+						Можно приобрести по отдельности диск и шину, цену уточняйте
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-3" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(3)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/tmm9cxt9sefi2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/yo0zhu69wa2k1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/xppvrhoenryx-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Диск Оригинал Mercedes W210 авангард с шинами 215/55 R16
+						<br />
+						<br />
+						Шина Goodyear Eagle LS EXE 215/55R16 год 2020 износ 20%
+						<br />
+						Диски оригинал Mercedes W210 авангард R16 7,5 J 5/112 ЦО 66 ЕТ 41 в
+						хорошем состояние.
+						<br />
+						Не варенный без ремонтов. Made in Italy.
+						<br />
+						<br />
+						Можно приобрести по отдельности диск и шину, цену уточняйте
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-4" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(4)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/kdfej74zh2nt3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/jb4pjhil12np3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/yugw83cj5trr-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Блок управления климат контролем Toyota Camry 10
+						<br />
+						<br />
+						Оптика и ЭЛЕКТРООБОРУДОВАНИЕ возврату и обмену не подлежат.
+						<br />
+						Привозные с Японии.
+						<br />
+						<br />
+						Товар полностью работоспособен. Могут присутствовать незначительные
+						следы эксплуатации, а также следы снятия/установки.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-5" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(5)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/z7p5lmrli32r1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/9aqwmt432sq82-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/b5iq5qi5xlij2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Диски оригинал BMW R16 7 J IS34 PSD 5x120 DIA 72.5 156 стиль
+						<br />
+						<br />
+						Общее косметическое состояние оцениваем по фото
+						<br />
+						<br />
+						Диски в хорошем состояние. Не гнутые, без заломов и трещин, без
+						следов сварки.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-6" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(6)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/5rkjr2fnjk381-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/uerybvysp1gc2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/0knph4ble3od-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Диски литые IR - S R17 от Toyota Mark 2 разноширокие
+						7JJ/7,5JJ PSD 5x114,3 DIA 60,1 ET50
+						<br />
+						<br />
+						Диск освежен полимерной краской в печи, без ремонта ровный
+						<br />
+						Привозные с Японии, в отличном состоянии
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-7" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(7)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/tku8i325ugkf1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/6o4qb6hch84f3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/76bc7670f99m3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Диски оригинальные Toyota Sienna R16 6,5JJ PSD 5x114,3 ET50
+						<br />
+						<br />
+						Диск освежен полимерной краской в печи, без ремонта ровный
+						<br />
+						Привозные с Японии, в отличном состоянии
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-8" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(8)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/301db8qo0fqr3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/evw0yoamaob5-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/jbund0o546cu2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Диск с шинами Kumho 245/45R17 от Mercedes Benz W212 оригинал
+						<br />
+						<br />
+						Диск оригинал Mercedes R17 8 J 5/112 ЦО 66.6 ET 48 Есть не большие
+						царапины на фото видно
+						<br />
+						Шина KUMHO PS71 245/45R17 год 2022 в отличном состояние
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-9" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(9)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/a2it305ap4712-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/gfd0gy2ds49b3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/c4ntsqy3qnac1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Диски оригинальные Toyota R16 6,5J PSD 5x114.3 ЦО61 ET45
+						Canada
+						<br />
+						<br />
+						Диск освежен полимерной краской в печи, без ремонта ровный
+						<br />
+						Привозные с Америки, в отличном состоянии
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-10" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(10)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/oksju3545zae1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/mcnga1z1p8wy-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/j814w5j5j7h5-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Диск с шинами Bridgestone 215/55R17 от Nissan оригинал
+						<br />
+						<br />
+						Диск оригинал Nissan R17 7 J 5/114,3 ЦО 67 ET 45 на одном диске есть
+						царапин
+						<br />
+						Шина Bridgestone Playz PX ii 215/55R17 год 2020 в отличном состояние
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-11" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(11)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/f755yr3bnlu83-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/0eu4792vgd6p-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/xobjrj1ehzg8-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Диски оригинал Lexus R16 6,5J PSD 5x114.3 ЦО 61 ET45 освежен
+						<br />
+						<br />
+						Диск освежен полимерной краской в печи, без ремонта ровный
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-12" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(12)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/ipthjhae6c0y2-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/tiyyc8hzf98d1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/9k7im62zzmqa1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Комплект литых дисков Legzas R18 8 J PSD 5/114,3 ET45 ЦО 73,1
+						Графит
+						<br />
+						<br />
+						Made in China для внутреннего рынка Японии, в идеальном состояние.
+						<br />
+						Диск освежен полимерной краской в печи, без ремонта ровный
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-13" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(13)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/qp0h3vt78dzk1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/33ad5q527l1i-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/8k9ucyt5tugt3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Диск с шинами BBS LM с двойной полкой разноширокие R20
+						5/114,3
+						<br />
+						<br />
+						Общее косметическое состояние оцениваем по фото
+						<br />
+						<br />
+						Диски в хорошем состояние передний 8,5JJ R20 ET35 / задний 10JJ R20
+						ET40 PSD 5/114,3 ЦO73,1 мм не гнутые, без заломов и трещин, без
+						следов сварки.
+						<br />
+						Шина передняя, задняя 225/35R20 ATR Sport 2020 г. Износ 20% Без
+						шишек.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-14" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(14)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/98vgsu3yhe931-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/4w79asey9fu82-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/0trxtj6zxt1t-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 1 - фото 3"
+					/>
+					<p>
+						Продам Литые диски Anhelo Corazon с резиной из Японии R20 9JJ
+						5/114,3
+						<br />
+						<br />
+						Общее косметическое состояние оцениваем по фото
+						<br />
+						<br />
+						Привозные с Японии
+						<br />
+						<br />
+						Цена окончательно
+						<br />
+						Диски Made in China для внутреннего рынка Японии
+						<br />
+						Диски в хорошем состояние передний 8,5JJ R20 ET35 / задний 9JJ R20
+						ET38 PSD 5/114,3 ЦO73,1 мм не гнутые, без заломов и трещин, без
+						следов сварки.
+						<br />
+						Шина передний 225/35R20 Hifly HF805 2021 г. Износ 30% Без шишек.
+						<br />
+						Шина задний 245/35R20 Maxtrek T5 2020 г. Износ 20% Без шишек.
+					</p>
+				</div>
+			</div>
+		</div>
+		<div id="modal-15" class="modal">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal(15)">&times;</span>
+				<div class="modal-images">
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/4j5ja62wekra3-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 1"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/fyfp14j83squ1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 2"
+					/>
+					<img
+						src="https://frankfurt.apollo.olxcdn.com/v1/files/j90xexe70chn1-KZ/image;s=1000x700"
+						class="modal-image"
+						alt="Товар 2 - фото 3"
+					/>
+					<p>
+						Продам Диск с резиной разноширокие 275 / 40 R19 8,5J BMW F01 стиль 235
+						<br />
+						<br />
+						Общее косметическое состояние оцениваем по фото
+						<br />
+						<br />
+						Диски в отличном состояние R19 8.5J ES25/ES39 PSD 5/120 не гнутые, без заломов и трещин, без следов сварки. Шина передний 245/45R19 / задний 275/40R19 PIRELLI 2021 г. Износ 10% Без шишек
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="h_set">Оставьте отзыв</h2>
+
+		<form
+			action="https://formsubmit.co/aslan_avto@mail.ru"
+			method="POST"
+			onsubmit="window.location.href='send.html';"
+			class="contact-form"
+		>
+			<input type="text" name="name" placeholder="Ваше имя" required />
+			<input type="email" name="email" placeholder="Ваш email" required />
+			<textarea
+				name="message"
+				rows="5"
+				placeholder="Ваш отзыв"
+				required
+			></textarea>
+			<!-- add hidden Honeypot input to prevent spams -->
+			<input type="hidden" name="_gotcha" style="display: none !important" />
+			<button type="submit">Отправить</button>
+		</form>
+
+		<br />
+
+		<!-- Футер с контактами -->
+		<footer>
+			<p>Свяжитесь с нами:</p>
+			<a
+				href="https://www.instagram.com/aslan_avto?igsh=bmozamJ1enZ2M2Fv"
+				target="_blank"
+				>Instagram</a
+			>
+			<a href="https://wa.me/77057000809" target="_blank">WhatsApp</a>
+			<a href="https://www.olx.kz/list/user/13A5s/" target="_blank">Olx</a>
+			<a href="payment_methods.html" target="_blank">Способы оплаты</a>
+			<a href="contact_us.html" target="_blank">Контакты</a>
+		</footer>
+
+		<style>
+			p {
+				font-size: 1.25em;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f3f3f3;
+				margin: 0;
+				padding: 0;
+			}
+
+			header {
+				background-color: #000;
+				padding: 2em;
+				text-align: center;
+			}
+
+			header img {
+				width: 150px;
+			}
+
+			footer {
+				background-color: #000;
+				color: #fff;
+				padding: 2em;
+				text-align: center;
+			}
+
+			footer a {
+				color: #fff;
+				text-decoration: none;
+				margin: 0 1em;
+			}
+
+			footer a:hover {
+				text-decoration: underline;
+			}
+
+			.h_set {
+				text-align: center;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 2em auto;
+				padding: 1em;
+				background-color: #fff;
+			}
+
+			.product-grid {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1em;
+				justify-content: center;
+			}
+
+			.product-card {
+				width: 300px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				background-color: #fff;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+				overflow: hidden;
+				transition: transform 0.2s;
+				text-align: center;
+				cursor: pointer;
+			}
+
+			.product-card:hover {
+				transform: scale(1.05);
+			}
+
+			.product-image {
+				width: 100%;
+				height: 200px;
+				object-fit: cover;
+			}
+
+			.product-info {
+				padding: 1em;
+			}
+
+			.product-title {
+				font-size: 1.2em;
+				margin: 0.5em 0;
+			}
+
+			.product-price {
+				font-size: 1.1em;
+				color: #333;
+			}
+
+			.product-condition {
+				font-size: 0.9em;
+				color: #777;
+			}
+
+			.contact-info {
+				text-align: center;
+				margin-bottom: 2em;
+			}
+
+			.contact-info p {
+				font-size: 1.2em;
+				color: #333;
+			}
+
+			.contact-info a {
+				color: #000;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			.contact-info a:hover {
+				text-decoration: underline;
+			}
+
+			.contact-form {
+				max-width: 800px;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.contact-form input,
+			.contact-form textarea {
+				padding: 1em;
+				margin: 0.5em 0;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				font-size: 1em;
+			}
+
+			.contact-form button {
+				padding: 1em;
+				background-color: #000;
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				font-size: 1.1em;
+				cursor: pointer;
+			}
+
+			.contact-form button:hover {
+				background-color: #333;
+			}
+
+			/* Модальное окно */
+			.modal {
+				display: none;
+				position: fixed;
+				z-index: 1;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				overflow: auto;
+				background-color: rgb(0, 0, 0);
+				background-color: rgba(0, 0, 0, 0.4);
+				padding-top: 60px;
+			}
+
+			.modal-content {
+				background-color: #fff;
+				margin: auto;
+				padding: 20px;
+				border: 1px solid #888;
+				width: 80%;
+				max-width: 800px;
+				border-radius: 17.5px;
+				overflow: hidden;
+			}
+
+			.close {
+				color: #aaa;
+				float: right;
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			.close:hover,
+			.close:focus {
+				color: black;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			.modal-images {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 1em;
+			}
+
+			.modal-image {
+				width: 100%;
+				max-width: 200px;
+				height: auto;
+				cursor: pointer;
+				border-radius: 12px;
+				overflow: hidden;
+			}
+
+			.map-container {
+				position: relative;
+				width: 100%;
+				padding-top: 20%; /* Базовая высота для больших экранов */
+			}
+
+			.map-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: 0;
+			}
+
+			/* Медиа-запрос для смартфонов */
+			@media (max-width: 768px) {
+				.map-container {
+					padding-top: 100%; /* Увеличиваем высоту карты для смартфонов */
+				}
+			}
+
+			/* Стили для мобильных устройств (ширина экрана до 768px) */
+			@media screen and (max-width: 768px) {
+				footer a {
+					display: block; /* Каждая ссылка будет на новой строке */
+					margin-bottom: 20px; /* Отступ снизу между ссылками */
+				}
+			}
+
+			/* Стили для всех устройств, чтобы ссылки по умолчанию шли рядом (если нужно) */
+			footer a {
+				margin-right: 10px; /* Отступ между ссылками, если они должны быть рядом */
+			}
+		</style>
+		<script>
+			function openModal(id) {
+				document.getElementById('modal-' + id).style.display = 'block'
+			}
+
+			function closeModal(id) {
+				document.getElementById('modal-' + id).style.display = 'none'
+			}
+		</script>
+	</body>
+</html>
