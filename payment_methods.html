@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Способы оплаты | Aslan Avto</title>
+		<link rel="stylesheet" href="/css/style.css" />
+		<style>
+			h2 {
+				text-align: center;
+				font-size: 2em;
+				margin-bottom: 1em;
+			}
+		</style>
+		<script>
+			// Функция для экранирования ввода пользователя
+			function sanitizeInput(input) {
+				const temp = document.createElement('div')
+				temp.innerText = input
+				return temp.innerHTML
+			}
+
+			function handleSubmit(event) {
+				event.preventDefault()
+				const userComment = document.getElementById('comment').value
+				const sanitizedComment = sanitizeInput(userComment)
+				document.getElementById('display').innerHTML =
+					'<strong>Ваш комментарий:</strong><br>' + sanitizedComment
+			}
+		</script>
+	</head>
+
+	<body>
+		<header>
+			<a href="https://ibb.co.com/C7cNqvR">
+				<img src="https://i.ibb.co.com/HzS10Y5/logo2.jpg" alt="logo2" />
+			</a>
+		</header>
+
+		<div class="container">
+			<h2>Способы оплаты</h2>
+
+			<div class="contact-info">
+				<p>• Kaspi: <a href="#" target="_blank"></a>+7 705 700 0809</p>
+				<p>• Visa: <a href="#" target="_blank">1111 2222 3333 4444</a></p>
+				<p>• MasterCard: <a href="#" target="_blank">5555 6666 7777 8888</a></p>
+				<p>• Телефон: +7 705 700 0809</p>
+				<hr style="height: 1.5px; background-color: black; border: none" />
+				<p>
+					Предлагаем несколько удобных способов оплаты для ваших покупок. Вы
+					можете оплатить через Kaspi, использовать банковские карты Visa или
+					MasterCard, а также оплатить через телефон. Для оплаты или уточнения
+					любых вопросов, связанных с оплатой, пожалуйста, свяжитесь по
+					телефону.
+				</p>
+			</div>
+		</div>
+
+		<footer>
+			<p>Ещё:</p>
+			<a href="index.html" target="_blank">Главная страница</a>
+			<a href="contact_us.html" target="_blank">Контакты</a>
+		</footer>
+		<style>
+			h2 {
+				text-align: center;
+				font-size: 2em;
+				margin-bottom: 1em;
+			}
+
+			body {
+				font-family: Arial, sans-serif;
+				background-color: #f3f3f3;
+				margin: 0;
+				padding: 0;
+			}
+
+			header {
+				background-color: #000;
+				padding: 2em;
+				text-align: center;
+			}
+
+			header img {
+				width: 150px;
+			}
+
+			footer {
+				background-color: #000;
+				color: #fff;
+				padding: 2em;
+				text-align: center;
+			}
+
+			footer a {
+				color: #fff;
+				text-decoration: none;
+				margin: 0 1em;
+			}
+
+			footer a:hover {
+				text-decoration: underline;
+			}
+
+			.container {
+				max-width: 1200px;
+				margin: 2em auto;
+				padding: 1em;
+				background-color: #fff;
+			}
+
+			.contact-info {
+				text-align: center;
+				margin-bottom: 2em;
+			}
+
+			.contact-info p {
+				font-size: 1.2em;
+				color: #333;
+			}
+
+			.contact-info a {
+				color: #000;
+				text-decoration: none;
+				font-weight: bold;
+			}
+
+			.contact-info a:hover {
+				text-decoration: underline;
+			}
+
+			.contact-form {
+				max-width: 800px;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+			}
+
+			.contact-form input,
+			.contact-form textarea {
+				padding: 1em;
+				margin: 0.5em 0;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				font-size: 1em;
+			}
+
+			.contact-form button {
+				padding: 1em;
+				background-color: #000;
+				color: #fff;
+				border: none;
+				border-radius: 8px;
+				font-size: 1.1em;
+				cursor: pointer;
+			}
+
+			.contact-form button:hover {
+				background-color: #333;
+			}
+		</style>
+	</body>
+</html>
